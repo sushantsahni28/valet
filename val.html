@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>For Tanvi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ===== Cinematic Background ===== */
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+  radial-gradient(circle at 20% 20%, #ff9fb3, transparent 40%),
+  radial-gradient(circle at 80% 30%, #ffc3a0, transparent 40%),
+  radial-gradient(circle at 50% 80%, #ffafbd, transparent 40%),
+  #ffdde1;
+
+  animation:bgMove 12s infinite alternate;
+}
+
+@keyframes bgMove{
+  to{
+    filter:hue-rotate(20deg);
+  }
+}
+
+/* ===== Floating blur lights ===== */
+
+body::before,
+body::after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  filter:blur(140px);
+  z-index:-1;
+}
+
+body::before{
+  background:#ff6b81;
+  top:-150px;
+  left:-150px;
+}
+
+body::after{
+  background:#ffb6c1;
+  bottom:-150px;
+  right:-150px;
+}
+
+/* ===== Glass Card ===== */
+
+.container{
+
+  width:90%;
+  max-width:560px;
+  padding:45px;
+
+  border-radius:28px;
+
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(25px);
+
+  border:1px solid rgba(255,255,255,0.35);
+
+  box-shadow:0 40px 120px rgba(0,0,0,0.35);
+
+  text-align:center;
+
+  transform:translateY(40px);
+  opacity:0;
+  animation:fadeUp 1s forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+#main-site{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Heading */
+
+h1{
+  font-size:clamp(28px,4vw,42px);
+  color:#ff758c;
+  margin-bottom:25px;
+}
+
+/* Typewriter text */
+
+#typing{
+  font-size:20px;
+  color:#ff758c;
+  font-weight:300;
+  margin-bottom:35px;
+  min-height:28px;
+}
+
+/* Buttons */
+
+.buttons{
+  position:relative;
+  height:75px;
+}
+
+button{
+  border:none;
+  padding:16px 30px;
+  font-size:18px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+#yesBtn{
+  background:linear-gradient(135deg,#ff4d6d,#ff758c);
+  color:white;
+  box-shadow:0 10px 30px rgba(255,77,109,.6);
+}
+
+#yesBtn:hover{
+  transform:translateY(-5px) scale(1.05);
+}
+
+#noBtn{
+  position:absolute;
+  background:white;
+  color:#ff4d6d;
+  font-weight:600;
+}
+
+/* ===== FULLSCREEN LOVE POPUP ===== */
+
+.popup{
+
+  position:fixed;
+  inset:0;
+
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+
+  padding:25px;
+}
+
+.popup h2{
+  font-size:42px;
+  margin-bottom:20px;
+  animation:pop .6s;
+}
+
+@keyframes pop{
+  0%{transform:scale(.5);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+
+/* Image */
+
+.img-container{
+  width:85%;
+  max-width:320px;
+  aspect-ratio:3/4;
+  margin:20px 0;
+}
+
+.image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+/* Floating hearts */
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:22px;
+  animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
+
+/* Mobile optimization */
+
+@media(max-width:420px){
+
+  .container{
+    padding:30px;
+  }
+
+  button{
+    font-size:16px;
+    padding:14px 22px;
+  }
+
+}
+
+#lock-screen{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:
+  radial-gradient(circle at 20% 20%, #ff9fb3, transparent 40%),
+  radial-gradient(circle at 80% 30%, #ffc3a0, transparent 40%),
+  #ffdde1;
+}
+
+.lock-box{
+  width:90%;
+  max-width:380px;
+  padding:45px;
+
+  border-radius:26px;
+
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  text-align:center;
+
+  box-shadow:0 40px 120px rgba(0,0,0,.35);
+
+  animation:fadeUp .8s;
+}
+
+@keyframes fadeUp{
+  from{
+    transform:translateY(40px);
+    opacity:0;
+  }
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+}
+
+.lock-box h2{
+  color:#ff758c;
+  margin-bottom:10px;
+}
+
+.lock-box p{
+  color:#ff758c;
+  opacity:.9;
+  margin-bottom:20px;
+}
+
+/* Date Picker Styling */
+
+.lock-box input{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  font-size:16px;
+  margin-bottom:15px;
+}
+
+/* Button */
+
+.lock-box button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+
+  background:linear-gradient(135deg,#ff4d6d,#ff758c);
+  color:white;
+
+  font-size:17px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.lock-box button:hover{
+  transform:scale(1.05);
+}
+
+#error{
+  margin-top:12px;
+  color:#ff4d6d;
+  font-weight:500;
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <div id="lock-screen">
+
+  <div class="lock-box">
+
+      <h2>💖 A Special Memory</h2>
+
+      <p>Select the date that changed everything…</p>
+
+      <input type="date" id="dateInput"/>
+
+      <button onclick="checkDate()">Unlock ❤️</button>
+
+      <p id="error"></p>
+
+  </div>
+
+</div>
+
+<div id="main-site" style="display:none;">
+    <div class="container">
+
+<h1>Tanvi… 💖</h1>
+
+<div id="typing"></div>
+
+<div class="buttons">
+<button id="yesBtn">YES ❤️</button>
+<button id="noBtn">No 😢</button>
+</div>
+
+</div>
+
+
+<div class="popup">
+
+<h2>You Just Made Me The Happiest 💍</h2>
+
+<div class="img-container">
+<img class="image" src="./val.jpg">
+</div>
+
+<p style="max-width:500px;font-size:20px;">
+If God gave me more lives to live,<br>
+    I would want you as my partner in every one. ❤️
+</p>
+
+</div>
+</div>
+
+
+
+<script>
+
+/* ===== Typewriter ===== */
+
+const text =
+"Will you be my Valentine?";
+
+let i=0;
+
+function type(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(type,40);
+  }
+}
+
+type();
+
+
+/* ===== Runaway NO button ===== */
+
+const noBtn=document.getElementById("noBtn");
+const container=document.querySelector(".container");
+
+function moveBtn(){
+
+  const rect=container.getBoundingClientRect();
+
+  const maxX=rect.width-noBtn.offsetWidth;
+  const maxY=rect.height-noBtn.offsetHeight;
+
+  noBtn.style.left=Math.random()*maxX+"px";
+  noBtn.style.top=Math.random()*maxY+"px";
+}
+
+noBtn.addEventListener("mouseenter",moveBtn);
+noBtn.addEventListener("touchstart",moveBtn);
+
+
+/* ===== YES CLICK MAGIC ===== */
+
+document.getElementById("yesBtn").onclick=()=>{
+
+  document.querySelector(".popup").style.display="flex";
+
+  launchHearts();
+  launchConfetti();
+};
+
+
+/* Hearts */
+
+function launchHearts(){
+
+  for(let i=0;i<35;i++){
+
+    const h=document.createElement("div");
+
+    h.className="heart";
+    h.innerHTML="💖";
+
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(Math.random()*26+14)+"px";
+    h.style.animationDuration=(Math.random()*3+3)+"s";
+
+    document.body.appendChild(h);
+
+    setTimeout(()=>h.remove(),6000);
+  }
+}
+
+
+/* Confetti */
+
+function launchConfetti(){
+
+  for(let i=0;i<120;i++){
+
+    const c=document.createElement("div");
+
+    c.style.position="fixed";
+    c.style.width="8px";
+    c.style.height="14px";
+    c.style.background=`hsl(${Math.random()*360},100%,70%)`;
+    c.style.left=Math.random()*100+"vw";
+    c.style.top="-20px";
+    c.style.opacity=.9;
+    c.style.transform=`rotate(${Math.random()*360}deg)`;
+
+    c.animate([
+      {transform:"translateY(0) rotate(0)"},
+      {transform:`translateY(120vh) rotate(${Math.random()*720}deg)`}
+    ],{
+      duration:3000+Math.random()*2000,
+      easing:"linear"
+    });
+
+    document.body.appendChild(c);
+
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+
+function checkDate(){
+
+   const correctDate = "2022-05-20"; // MUST be this format
+
+   const selected =
+       document.getElementById("dateInput").value;
+
+   if(selected === correctDate){
+
+        document.getElementById("lock-screen")
+            .style.display="none";
+
+        document.getElementById("main-site")
+            .style.display="flex";
+
+   }else{
+
+        const error = document.getElementById("error");
+
+        error.innerText = "Hint: The day our story began ❤️";
+
+        // little shake animation 🙂
+        document.querySelector(".lock-box")
+          .animate(
+            [
+              {transform:'translateX(-6px)'},
+              {transform:'translateX(6px)'},
+              {transform:'translateX(-6px)'},
+              {transform:'translateX(0)'}
+            ],
+            {duration:300}
+          );
+   }
+}
+
+</script>
+
+</body>
+</html>
